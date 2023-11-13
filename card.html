@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card</title>
+    <link rel="stylesheet" href="app.css">
+    <!-- link font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+       
+        <div class="card-list">
+
+
+            <!-- card1 -->
+                <div class="card" id="card1">
+                    <img src="assets/3 1.png" alt="">
+                    <div class="desc">
+                        <h5>Petualangan Si Kelinci Kecil di Hutan Ajaib`</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, harum.</p>
+                    </div>
+                </div>
+                <!-- card1 -->
+                <div class="card" id="card2">
+                    <img src="assets/4 1.png" alt="">
+                    <div class="desc">
+                        <h5>Petualangan Si Kelinci Kecil di Hutan Ajaib`</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, harum.</p>
+                    </div>
+                </div>
+                <!-- card1 -->
+                <div class="card" >
+                    <img src="assets/5 1.png" alt="">
+                    <div class="desc">
+                        <h5>Petualangan Si Kelinci Kecil di Hutan Ajaib`</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, harum.</p>
+                    </div>
+                </div>
+                <!-- card1 -->
+                <div class="card" >
+                    <img src="assets/6 1.png" alt="">
+                    <div class="desc">
+                        <h5>Petualangan Si Kelinci Kecil di Hutan Ajaib`</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, harum.</p>
+                    </div>
+                </div>
+                <!-- card1 -->
+                <div class="card" >
+                    <img src="assets/7 1.png" alt="">
+                    <div class="desc">
+                        <h5>Petualangan Si Kelinci Kecil di Hutan Ajaib`</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, harum.</p>
+                    </div>
+                </div>
+                <!-- card1 -->
+                <div class="card" >
+                    <img src="assets/4 1.png" alt="">
+                    <div class="desc">
+                        <h5>Petualangan Si Kelinci Kecil di Hutan Ajaib`</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, harum.</p>
+                    </div>
+                </div>
+                <!-- card1 -->
+                <div class="card" >
+                    <img src="assets/6 1.png" alt="">
+                    <div class="desc">
+                        <h5>Petualangan Si Kelinci Kecil di Hutan Ajaib`</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, harum.</p>
+                    </div>
+                </div>
+                <!-- card1 -->
+                <div class="card" >
+                    <img src="assets/5 1.png" alt="">
+                    <div class="desc">
+                        <h5>Petualangan Si Kelinci Kecil di Hutan Ajaib`</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, harum.</p>
+                    </div>
+                </div>
+                <!-- card1 -->
+                <div class="card" >
+                    <img src="assets/3 1.png" alt="">
+                    <div class="desc">
+                        <h5>Petualangan Si Kelinci Kecil di Hutan Ajaib`</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, harum.</p>
+                    </div>
+                </div>
+                <!-- card1 -->
+                <div class="card" >
+                    <img src="assets/3 1.png" alt="">
+                    <div class="desc">
+                        <h5>Petualangan Si Kelinci Kecil di Hutan Ajaib`</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, harum.</p>
+                    </div>
+                </div>
+                
+                
+            </div>
+ 
+            <div class="floatingPop popdisplay">
+                <h5>cari</h5>
+                <input type="text" name="" id="">
+                <!-- <img src="assets/3 1.png" alt="" class="popdisplay"> -->
+                <button id="close">X</button>
+            </div>
+            
+            
+            <img src="assets/main page.png" alt="bg-main" class="bg-main">
+
+            <div id="btnFloat"><i class="fa fa-search"></i></div>
+
+
+             
+            <!-- bg -->
+    <script>
+        // card 1
+
+const card1 = document.querySelector('#card1')
+const card2 = document.querySelector('#card2')
+const card = document.querySelector('.card')
+
+const url1 = 'card1.html'
+const url2 = 'card2.html'
+const url3 = 'card3.html'
+
+card1.addEventListener('click',()=>{  
+    location.href = url1;
+})
+card2.addEventListener('click',()=>{  
+    location.href = url2;
+})
+
+
+const btnCari = document.querySelector('.fa-search')
+const cardList = document.querySelector('.card-list')
+const pop = document.querySelector('.floatingPop')
+const btnClose = document.querySelector('#close')
+
+const bodi = document.querySelector('body')
+
+btnCari.addEventListener('click',()=>{
+    pop.classList.add('pop')
+    cardList.classList.toggle('listCard')
+
+    btnClose.addEventListener('click',()=>{
+        
+        
+        pop.classList.remove('pop')
+        cardList.classList.remove('listCard')
+        
+    })
+
+    
+ 
+})
+
+btnCari.classList.add('btnFloat')
+
+// bodi.addEventListener('click',()=>{
+
+
+//     pop.classList.toggle('pop')
+    
+
+//     cardList.classList.toggle('listCard')
+ 
+// })
+
+
+
+
+
+
+        
+    </script>
+</body>
+</html>

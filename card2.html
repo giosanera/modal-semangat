@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARD - 1</title>
+    <link rel="stylesheet" href="style/content.css">
+    <!-- link font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <!-- contentContainer -->
+
+    <div class="fContainer">
+        <div class="wrapper">               
+            <div class="play">
+                
+                <i class="fa fa-play" id="btnPlay"></i>
+                <i class="fa fa-pause" id="btnPause"></i>
+            
+            </div> 
+            <img src="assets/Rectangle 1.png" alt="hero">
+            </img>
+            <div class="desc">
+                <p>In a beautiful forest, there lived a group of very friendly animals. One of the happiest animals in the forest is a little rabbit named Kiko. Kiko is a little bunny who is full of enthusiasm and always wants to go on adventures. <br><br>
+
+                    One day, Kiko woke up earlier than usual and said to himself, "Today is the day for adventure! I want to find the lost treasure!" <br> <br>
+                    
+                    Kiko jumped out of his house and immediately met his friends. He said to them, "Come on guys, we will look for lost treasure in this forest!"</p> <br><br><br><br>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="modal">
+
+        <p id="closed">x</p>
+        <h1>The End</h1>
+        <div class="btn">
+            <button class="primary">Rate This app</button>
+            <button class="secondary">Repeat again</button>
+        </div>
+
+    </div>
+
+
+    <!-- audio -->  
+  
+
+    <div id="btnFloat"><i class="fa fa-arrow-left"></i></div>
+
+    <audio src="storyline/music.mp3"></audio>
+
+    <script>
+        const backbtn = document.querySelector('#btnFloat')
+        const btnprimary = document.querySelector('.primary')
+        const modal = document.querySelector('.modal')
+        const btnsec = document.querySelector('.secondary')
+        const closed = document.querySelector('#closed')
+        const deskrip = document.querySelector('.desc')
+
+        // scroll
+        document.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+            if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 20) {
+                backbtn.style.display = "flex";
+            } else {
+                backbtn.style.display = "none";
+            }
+            }
+
+
+        const main = 'card.html'
+
+        const kundev = 'https://play.google.com/store/apps/developer?id=Kun+Dev'
+        backbtn.addEventListener('click',()=>{
+            modal.classList.add('d-flex')
+
+
+            btnprimary.addEventListener('click',()=>{
+                location.href = kundev
+
+            })
+            btnsec.addEventListener('click',()=>{
+                modal.classList.remove('d-flex')
+
+            })
+            closed.addEventListener('click',()=>{
+                location.href = main;
+
+            })
+
+
+
+        })
+        backbtn.classList.add('btnFloat')
+
+
+     const btnOpen = document.querySelector('#btnPlay')
+     const btnPause = document.querySelector('#btnPause')
+  
+     btnOpen.addEventListener('click',()=>{
+
+        let audio = new Audio ('kilingme.mp3')
+            audio.play();
+
+        // wrapper.style.backgroundColor = 'red'
+
+        btnPause.addEventListener('click',()=>{
+   
+               audio.pause();
+   
+           // wrapper.style.backgroundColor = 'red'
+   
+        })
+     })
+
+
+    </script>
+    
+</body>
+</html>
