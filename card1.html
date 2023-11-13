@@ -36,6 +36,17 @@
         </div>
     </div>
 
+    <!-- modal -->
+    <div class="modal">
+
+        <p id="closed">x</p>
+        <h1>The End</h1>
+        <div class="btn">
+            <button class="primary">Rate This app</button>
+            <button class="secondary">Repeat again</button>
+        </div>
+
+    </div>
 
     <!-- audio -->  
   
@@ -45,26 +56,48 @@
     <audio src="storyline/music.mp3"></audio>
 
     <script>
-        const backbtn = document.querySelector('#btnFloat')
+       const backbtn = document.querySelector('#btnFloat')
+        const btnprimary = document.querySelector('.primary')
+        const modal = document.querySelector('.modal')
+        const btnsec = document.querySelector('.secondary')
+        const closed = document.querySelector('#closed')
         const deskrip = document.querySelector('.desc')
+       // scroll
+       document.onscroll = function() {scrollFunction()};
 
-        // scroll
-        document.onscroll = function() {scrollFunction()};
-
-            function scrollFunction() {
-            if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 20) {
-                backbtn.style.display = "flex";
-            } else {
-                backbtn.style.display = "none";
-            }
-            }
+function scrollFunction() {
+if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 20) {
+    backbtn.style.display = "flex";
+} else {
+    backbtn.style.display = "none";
+}
+}
 
 
-        const main = 'card.html'
-        backbtn.addEventListener('click',()=>{
-            location.href = main
-        })
-        backbtn.classList.add('btnFloat')
+const main = 'card.html'
+
+const kundev = 'https://play.google.com/store/apps/developer?id=Kun+Dev'
+backbtn.addEventListener('click',()=>{
+modal.classList.add('d-flex')
+
+
+btnprimary.addEventListener('click',()=>{
+    location.href = kundev
+
+})
+btnsec.addEventListener('click',()=>{
+    modal.classList.remove('d-flex')
+
+})
+closed.addEventListener('click',()=>{
+    location.href = main;
+
+})
+
+
+
+})
+backbtn.classList.add('btnFloat')
 
 
      const btnOpen = document.querySelector('#btnPlay')
