@@ -19,7 +19,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    /* overflow: hidden; */
+    overflow: hidden;
     width: 375px;
     height: 812px;
     position: relative;
