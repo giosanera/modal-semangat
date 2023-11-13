@@ -63,6 +63,7 @@
         const btnsec = document.querySelector('.secondary')
         const closed = document.querySelector('#closed')
         const deskrip = document.querySelector('.desc')
+
        // scroll
        document.onscroll = function() {scrollFunction()};
 
@@ -78,8 +79,10 @@ if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 20) {
 const main = 'card.html'
 
 const kundev = 'https://play.google.com/store/apps/developer?id=Kun+Dev'
+
+
 backbtn.addEventListener('click',()=>{
-modal.classList.add('d-flex')
+modal.classList.toggle('d-flex')
 
 
 btnprimary.addEventListener('click',()=>{
