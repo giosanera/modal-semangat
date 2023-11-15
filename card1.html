@@ -111,23 +111,58 @@ backbtn.classList.add('btnFloat')
      const btnOpen = document.querySelector('#btnPlay')
      const btnPause = document.querySelector('#btnPause')
 
-     const audioSrc = 'https://github.com/giosanera/listening-app-audio/assets-adio/A Quiet Shore.mp3'
+    //  const audioSrc = 'https://github.com/giosanera/listening-app-audio/assets-adio/A Quiet Shore.mp3'
   
-     btnOpen.addEventListener('click',()=>{
+    //  btnOpen.addEventListener('click',()=>{
 
-        let audio = new Audio (audioSrc)
-            audio.play();
+    //     let audio = new Audio (audioSrc)
+    //         audio.play();
 
-        // wrapper.style.backgroundColor = 'red'
+    //     // wrapper.style.backgroundColor = 'red'
 
-        btnPause.addEventListener('click',()=>{
+    //     btnPause.addEventListener('click',()=>{
    
-               audio.pause();
+    //            audio.pause();
    
-           // wrapper.style.backgroundColor = 'red'
+    //        // wrapper.style.backgroundColor = 'red'
    
-        })
-     })
+    //     })
+    //  })
+
+    const ctx = new AutioContext();
+
+        let audio;
+
+        fetch("gs://listening-app-e843d.appspot.com/Backsound Jawa - Javanese Wedding Backsound.wav")
+
+        .then(data => data.arrayBuffer())
+        .then(arrayBuffer => ctx.decodeAudioData(arrayBuffer))
+        .then(decodedAudio => {
+        audio = decodedAudio;
+
+        });
+
+
+        function playback() {
+        const playSound = ctx.createBufferSource();
+
+        playSound.buffer = audio;
+        playSound.cpnnect(ctx.destination)
+        playSound.start(ctx.currentTime);
+        
+        btnPause.addEventListener('click', event => {
+            playSound.pause();
+        });
+        
+        }
+
+        btnOpen.addEventListener('click', playback());
+
+
+
+   
+
+
 
 
     </script>
