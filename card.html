@@ -101,8 +101,16 @@
             </div>
  
             <div class="floatingPop popdisplay">
-                <h5>cari</h5>
-                <input type="text" name="" id="">
+                
+                <input type="text" name="keyword">
+
+                <div id="btn">
+                    <button id="search">Search</button>
+                    <button id="clear">Clear</button>
+                </div>
+                <div class="data">
+                    <a href="#">Listening Animal in zoo</a>
+                </div>
                 <!-- <img src="assets/3 1.png" alt="" class="popdisplay"> -->
                 <button id="close">X</button>
             </div>
@@ -133,41 +141,128 @@ card2.addEventListener('click',()=>{
     location.href = url2;
 })
 
-
+// selector
 const btnCari = document.querySelector('.fa-search')
 const cardList = document.querySelector('.card-list')
 const pop = document.querySelector('.floatingPop')
 const btnClose = document.querySelector('#close')
+const btnClear = document.querySelector('#clear')
+const btnSearch = document.querySelector('#search')
+const searchBox = document.getElementsByName('keyword')[0]
 
-const bodi = document.querySelector('body')
+// data section selection
+
+const data_section = document.getElementsByClassName('data')[0]
+
+
+
+// data anomali 
+
+const data = [
+    'Listening Nature',
+    'Animal On Zoo',
+    'Culture Wild',
+    'Fish on unity form',
+    'Frog talking each other',
+    'Tiranosaurus Eating the plant'
+]
+
 
 btnCari.addEventListener('click',()=>{
-    pop.classList.add('pop')
+    pop.classList.toggle('pop')
     cardList.classList.toggle('listCard')
 
     btnClose.addEventListener('click',()=>{
         
-        
         pop.classList.remove('pop')
-        cardList.classList.remove('listCard')
-        
+        cardList.classList.remove('listCard') 
     })
-
-    
  
 })
 
+btnClear.addEventListener('click', event => {
+
+    searchBox.value = "";
+
+});
+
+btnSearch.addEventListener('click', event => {
+    searchData();
+})
+
+    // data value
+    searchBox.addEventListener('keyup', event => {
+        if (event.keyCode === 13) {
+            searchData();
+            data_section.classList.remove('d-flex')
+        }
+    });
+
+
+
+// func melakukan pencaraian data
+function searchData(){
+    // ketika input diketik ubah ke toLowerCase()
+    // buat variabel baru buat nampung
+
+    const search_value = searchBox.value.toLowerCase();
+
+    // cloning data anomali diatas dengan slice[0] dan array dimulai dari 0
+
+    const data_filtered = data.slice(0);
+    
+    // lakukan perulanmgan ketika data diketik berdasarkan "keyword " apakah ada atu tidak
+    data_section.innerHTML = "";
+    for (let i = 0; i < data_filtered.length; i++) {
+        if (data_filtered[i].toLowerCase().includes(search_value)) {
+            
+            // maka lakukan ambil alih lis data a href default menjadi data anomali berdasarkan keyword
+
+         
+                   
+            data_section.innerHTML += `<a href="#">${data_filtered[i]}</a>`
+        }
+        
+    }
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 btnCari.classList.add('btnFloat')
 
-// bodi.addEventListener('click',()=>{
-
-
-//     pop.classList.toggle('pop')
-    
-
-//     cardList.classList.toggle('listCard')
- 
-// })
 
 
 

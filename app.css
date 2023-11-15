@@ -173,42 +173,77 @@ body {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    top: 70%;
+    top: 90%;
     left: 45%;
     border: none;
     background-color: beige;
     font-weight: bold;
     opacity: .8;
+    box-shadow: -9px 7px 19px -6px rgba(0,0,0,1);
 }
 
 .pop {
     display: flex;
-    padding: 20px 10px;
+    padding: 20px 4px;
     border-radius: 12px;
     background-color: white;
     color: black;
     width: 270px;
     position: absolute;
     z-index: 99;
-    top: 50%;
+    top: 10%;
     left: 15%;
     align-items: center;
     box-shadow: -9px 7px 19px -6px rgba(0,0,0,1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 
 .pop button {
     margin-top: 30px;
+    
 }
 
 .popdisplay input {
-    padding: 12px;
-    margin-left: 10px;
+    width: 80%;
+    padding: 12px 4px;
+    margin-bottom: -12px;
+    /* margin-left: 10px; */
     border-radius: 12px;
-    border: 1px solid var(--primary--colo);
+    /* border: 1px solid var(--primary--colo); */
+
     
+}
+
+
+#btn {
+    display: flex;
+}
+
+#btn , #search, #clear {
+    padding: 12px;
+    border: 0;
+    width: 80%;
+    gap: 6px;
+
 }
 
 .listCard {
     opacity: .5;
+}
+
+
+
+.data {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 12px;
+    gap: 6px;
+}
+
+.data a {
+    font-size: 14px;
 }
