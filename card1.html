@@ -110,10 +110,12 @@ backbtn.classList.add('btnFloat')
 
      const btnOpen = document.querySelector('#btnPlay')
      const btnPause = document.querySelector('#btnPause')
+
+     const audioSrc = 'https://github.com/giosanera/listening-app-audio/assets-adio/A Quiet Shore.mp3'
   
      btnOpen.addEventListener('click',()=>{
 
-        let audio = new Audio ('kilingme.mp3')
+        let audio = new Audio (audioSrc)
             audio.play();
 
         // wrapper.style.backgroundColor = 'red'
