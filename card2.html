@@ -111,21 +111,26 @@ const main = 'card.html'
 
 const kundev = 'https://play.google.com/store/apps/developer?id=Kun+Dev'
 
-
+// wrapper selection
+const wrapper = document.querySelector('.wrapper')
 backbtn.addEventListener('click',()=>{
 modal.classList.toggle('d-flex')
+wrapper.style.opacity = '.5'
+wrapper.style.backgroundColor = '#00000055'
 
 backbtn.addEventListener('click',()=>{
     // location.href = main;
-
+    
 })
 
 btnprimary.addEventListener('click',()=>{
     location.href = kundev
-
+    
 })
 btnsec.addEventListener('click',()=>{
     modal.classList.remove('d-flex')
+    wrapper.style.opacity = '1'
+    wrapper.style.backgroundColor = ''
 
 })
 closed.addEventListener('click',()=>{
