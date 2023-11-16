@@ -186,6 +186,12 @@ animation-duration: 4s;
     color: var(--text-pri);
 }
 
+#closed {
+
+    font-size: 16px;
+}
+
+/* end modal */
 
 
 .content {
