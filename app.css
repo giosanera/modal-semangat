@@ -326,7 +326,7 @@ body {
         margin: 20px 0px;
         height: 80%;
         justify-content: center;
-        background-color: red;
+        /* background-color: red; */
     }
 
     .wrapper img {
