@@ -17,14 +17,18 @@
     <!-- contentContainer -->
 
     <div class="fContainer">
-        <div class="wrapper">               
-            <div class="play">
-                
+        <div class="wrapper">   
+
+            <span class="play">
+                <span class="progres"></span>
+            </span>
+            <div class="play"> 
                 <i class="fa fa-play" id="btnPlay"></i>
                 <i class="fa fa-pause" id="btnPause"></i>
             
             </div> 
-            <img src="assets/Rectangle 1.png" alt="hero">
+
+            <img src="assets/Rectangle 1.png" alt="hero" class="hero">
             </img>
 
             <div class="content">
@@ -57,16 +61,20 @@
                                 <span><i class="fa fa-arrow-left"></i></span>
                                 <span><i class="fa fa-arrow-right"></i></span>
                         </div>
+                    
                     </div>
+
+                   
 
             </div>
 
             <!-- float -->
-            <div id="btnFloat"><i class="fa fa-arrow-left"></i>
-            </div>
-
+            
         </div>
     </div>
+    <div id="btnFloat"><i class="fa fa-arrow-left" style="color: black;"></i>
+    </div>
+    <br><br><br><br>
 
     <!-- modal -->
     <div class="modal">
@@ -80,12 +88,7 @@
 
     </div>
 
-    <!-- audio -->  
-  
 
-
-
-    <audio src="storyline/music.mp3"></audio>
 
     <script>
        const backbtn = document.querySelector('#btnFloat')
@@ -147,7 +150,7 @@ backbtn.classList.add('btnFloat')
      const btnOpen = document.querySelector('#btnPlay')
      const btnPause = document.querySelector('#btnPause')
 
-     const audioSrc = 'https://firebasestorage.googleapis.com/v0/b/listening-app-e843d.appspot.com/o/listening-apps%2FBacksound%20Gamelan%20Orkestra%20-%20Wonderfull%20Javanese.wav?alt=media&token=1c6bd6a2-1394-49e8-aa50-def92aa0b91b'
+     const audioSrc = 'https://firebasestorage.googleapis.com/v0/b/listening-app-e843d.appspot.com/o/Backsound%20Jawa%20-%20Javanese%20Wedding%20Backsound.wav?alt=media&token=91753731-e1eb-48d1-9c46-1ae8784c33b1'
   
      btnOpen.addEventListener('click',()=>{
 

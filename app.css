@@ -20,35 +20,54 @@
 body {
     font-family: 'Poppins', sans-serif;
     overflow: hidden;
-    width: 375px;
-    height: 812px;
-
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 .fContainer {
     width: 375px;
+    /* margin: 12px; */
     height: 812px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
 }
 
 .wrapper {
-    width: 100%;
-    height: 80%;
+    width: 100vw;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     position: relative;
-    border-radius: 40px;
+    /* border-radius: 40px; */
     overflow: hidden;
+}
+
+
+.wrapper-card {
+
+    width: 100vw;
+    height: 1200px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
 }
 
 .wrapper img{
     width: 100%;
     height: 70%;
     top: 0;
-    object-fit: cover;
-    border-radius: 0px 0px 20px 20px;
+    /* object-fit: cover; */
+    /* border-radius: 0px 0px 20px 20px; */
 }
 
 .cta {
@@ -77,24 +96,37 @@ body {
     padding: 20px;
     background-color: var(--primary--colo);
     color: var(--bg-card);
-    font-size: 16px;
     font-weight: bolder;
     border: 10px;
     border-radius: 4px;
+    content: 'Started';
+}
+
+#cta {
+    font-size: 18px;
+    text-transform: uppercase;
+
 }
 
 
 .card-list {
+    
     display: flex;
     flex-direction: column;
-    width: 375px;
-    height: 100%;
+    width: 105%;
+    height: 1000px !important;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
     overflow-y: scroll;
+    margin-top: 16%;
+    scrollbar-width: thin;
+
 }
 
 .card {
-    margin: 10px;
-    margin-bottom: 20px;   
+    position: relative;
+    margin-bottom: 16px;   
     display: flex;
     padding: 12px;
     border-radius: 6px;
@@ -103,15 +135,27 @@ body {
     box-shadow: -9px 7px 19px -6px rgba(0,0,0,1);
     
 }
-.card:first-child {
-    margin-top: 10%;
-
-    
+#card1 {
+    padding-top: 20px;
+    margin-top: 8%;
+    /* background-color: red;    */
 }
+
+.bg-main {
+    position: absolute;
+    object-fit: fill;
+    background-repeat: repeat-y;
+    width: 120%;
+    height: 100vh;
+    top: 0;
+    z-index: -99;
+}
+
 
 .card img {
     border-radius: 12px;
     width: 50%;
+    object-fit: cover;
 }
 
 
@@ -127,13 +171,6 @@ body {
 }
 
 
-.bg-main {
-    position: absolute;
-    width: 375px;
-    height: 812px;
-    top: 0;
-    z-index: -99;
-}
 
 
 #btnFloat {
@@ -247,3 +284,6 @@ body {
 .data a {
     font-size: 14px;
 }
+
+
+
