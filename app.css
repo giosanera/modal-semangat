@@ -37,8 +37,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow-x: hidden;
-
+    
 }
 
 .wrapper {
@@ -53,15 +52,6 @@ body {
     overflow: hidden;
 }
 
-
-.wrapper-card {
-
-    width: 100vw;
-    height: 1200px;
-    overflow-x: hidden;
-    overflow-y: scroll;
-
-}
 
 .wrapper img{
     width: 100%;
@@ -122,7 +112,6 @@ body {
     overflow-y: scroll;
     margin-top: 16%;
     scrollbar-width: thin;
-    overflow-x: hidden;
 
 }
 
