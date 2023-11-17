@@ -112,23 +112,24 @@ animation-duration: 4s;
 
 .play {
     padding:12px 30px;
-    background-color: rgb(255, 255, 255,85%);
+    background-color: rgb(255, 255, 255,70%);
     position: absolute;
-    width: 80%;
+    width: 40%;
     display: flex;
     justify-content: center;
     border-radius: 12px;
     gap: 16px;
     top: 45%;
     box-shadow: -9px 7px 19px -6px rgba(0,0,0,1);
+    border: 3px solid  var(--bg-card);
 }
 
 
 .fa {
     padding: 12px 16px;
-    border: 2px solid var(--primary--colo);
+    background-color: var(--primary--colo);
     border-radius: 50%;
-    color: var(--primary--colo);
+    color: var(--bg-card);
     font-weight: bold;
 }
 
