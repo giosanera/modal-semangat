@@ -216,11 +216,11 @@ body {
     border-radius: 12px;
     background-color: white;
     color: black;
-    width: 270px;
+    width: 80%;
     position: absolute;
     z-index: 99;
     top: 10%;
-    left: 15%;
+    left: 10%;
     align-items: center;
     box-shadow: -9px 7px 19px -6px rgba(0,0,0,1);
     display: flex;
@@ -249,14 +249,16 @@ body {
 
 #btn {
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #btn , #search, #clear {
     padding: 12px;
     border: 0;
-    width: 80%;
-    gap: 6px;
-
+    width: 50%;
+    border-radius: 10%;
+    gap: 10px;
 }
 
 .listCard {

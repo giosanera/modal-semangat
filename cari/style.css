@@ -2,12 +2,20 @@ body {
 	font-family: arial,sans-serif;
 	color: #475c6c;
 	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	width: 600px;
+	height: 300px;
+	background-color: crimson;
+	padding: 20px;
 }
 
 .title {
