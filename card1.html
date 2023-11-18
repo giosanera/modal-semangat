@@ -11,6 +11,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- bootstrap link cdn -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
 
@@ -18,54 +21,76 @@
 
     <div class="fContainer">
         <div class="wrapper">   
-
-       
             <div class="play"> 
                 <i class="fa fa-play" id="btnPlay"></i>
-                <i class="fa fa-pause" id="btnPause"></i>
-            
+                <i class="fa fa-pause" id="btnPause"></i>     
             </div> 
 
             <img src="assets/Rectangle 1.png" alt="hero" class="hero">
             </img>
 
-            <div class="content">
-
-                <div class="desc">
-
-                    <div class="swipper">
+            <div class="content mt-4">
+                    <div id="carouselExampleIndicators" class="carousel slide p-3 m-2">
+           
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <p class="slide-1">
+                                  <strong>Ini slide 1 😁</strong> <br />
+                                  <br />
+                                  In a beautiful forest, there lived a group of very friendly animals. One of the happiest animals in the forest is a little rabbit named Kiko. Kiko is a little bunny who is full of enthusiasm and always wants to go on
+                                  adventures. <br /><br />
+                  
+                                  One day, Kiko woke up earlier than usual and said to himself, "Today is the day for adventure! I want to find the lost treasure!" <br />
+                                  <br />
+                  
+                                  Kiko jumped out of his house and immediately met his friends. He said to them, "Come on guys, we will look for lost treasure in this forest!"
+                                </p>
+                              </div>
+                              <div class="carousel-item">
+                                <p class="slide-1">
+                                  <strong>Ini slide 2 😣</strong> <br />
+                                  <br />
+                                  In a beautiful forest, there lived a group of very friendly animals. One of the happiest animals in the forest is a little rabbit named Kiko. Kiko is a little bunny who is full of enthusiasm and always wants to go on
+                                  adventures. <br /><br />
+                  
+                                  One day, Kiko woke up earlier than usual and said to himself, "Today is the day for adventure! I want to find the lost treasure!" <br />
+                                  <br />
+                  
+                                  Kiko jumped out of his house and immediately met his friends. He said to them, "Come on guys, we will look for lost treasure in this forest!"
+                                </p>
+                              </div>
+                              <div class="carousel-item">
+                                <p class="slide-1">
+                                  <strong>Ini slide 3</strong> <br />
+                                  <br />
+                                  In a beautiful forest, there lived a group of very friendly animals. One of the happiest animals in the forest is a little rabbit named Kiko. Kiko is a little bunny who is full of enthusiasm and always wants to go on
+                                  adventures. <br /><br />
+                  
+                                  One day, Kiko woke up earlier than usual and said to himself, "Today is the day for adventure! I want to find the lost treasure!" <br />
+                                  <br />
+                  
+                                  Kiko jumped out of his house and immediately met his friends. He said to them, "Come on guys, we will look for lost treasure in this forest!"
+                                </p>
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
                         
-                        <p class="slide-1"> <strong>Ini slide 1</strong> <br>
-                            <br>
-                            In a beautiful forest, there lived a group of very friendly animals. One of the happiest animals in the forest is a little rabbit named Kiko. Kiko is a little bunny who is full of enthusiasm and always wants to go on adventures. <br><br>
-                            
-                        One day, Kiko woke up earlier than usual and said to himself, "Today is the day for adventure! I want to find the lost treasure!" <br> <br>
-                        
-                        Kiko jumped out of his house and immediately met his friends. He said to them, "Come on guys, we will look for lost treasure in this forest!"</p> <br><br><br><br>
-
-                        <p class="absolute slide2"> <strong>Ini slide 2 😂</strong> <br>
-                            <br>
-                            In a beautiful forest, there lived a group of very friendly animals. One of the happiest animals in the forest is a little rabbit named Kiko. Kiko is a little bunny who is full of enthusiasm and always wants to go on adventures. <br><br>
-                            
-                        One day, Kiko woke up earlier than usual and said to himself, "Today is the day for adventure! I want to find the lost treasure!" <br> <br>
-                        
-                        Kiko jumped out of his house and immediately met his friends. He said to them, "Come on guys, we will look for lost treasure in this forest!"</p> <br><br><br><br>
-                        
-                    </div>
-                        
-
-                        
-                        <div class="arrow">
-                                <span><i class="fa fa-arrow-left"></i></span>
-                                <span><i class="fa fa-arrow-right"></i></span>
-                        </div>
                     
-                    </div>
-
-                   
-
+                
             </div>
-
+            
+            <!-- <div class="arrow">
+                    <span><i class="fa fa-arrow-left"></i></span>
+                    <span><i class="fa fa-arrow-right"></i></span>
+            </div> -->
             <!-- float -->
             
         </div>
@@ -221,6 +246,8 @@ backbtn.classList.add('btnFloat')
     })
 
      </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     
 </body>
 </html>
