@@ -51,8 +51,78 @@ body {
   width: 100%;
   height: 70%;
   top: 0;
+
   /* object-fit: cover; */
   /* border-radius: 0px 0px 20px 20px; */
+}
+@keyframes ease-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.pinjol {
+  width: 100%;
+  height: 70%;
+  top: 0;
+  object-fit: cover;
+  border-radius: 0px 0px 20px 20px;
+  animation-name: ease-in;
+  animation-duration: 3s;
+}
+.pinjol2 {
+  width: 100%;
+  height: 70%;
+  top: 0;
+  object-fit: cover;
+  border-radius: 0px 0px 20px 20px;
+  animation-name: pinjol2;
+  animation-duration: 3s;
+}
+
+@keyframes pinjol2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.pinjol3 {
+  width: 100%;
+  height: 70%;
+  top: 0;
+  object-fit: cover;
+  border-radius: 0px 0px 20px 20px;
+  animation-name: pinjol3;
+  animation-duration: 3s;
+}
+@keyframes pinjol3 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.pinjol4 {
+  width: 100%;
+  height: 70%;
+  top: 0;
+  object-fit: cover;
+  border-radius: 0px 0px 20px 20px;
+  animation-name: pinjol4;
+  animation-duration: 3s;
+}
+@keyframes pinjol4 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .cta {
