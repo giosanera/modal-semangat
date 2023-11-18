@@ -122,19 +122,19 @@ body {
 }
 
 .d-flex {
-  padding: 20px;
-  width: 300px;
-  height: auto;
+  width: 200px;
+  height: 100px;
   background-color: white;
   box-shadow: -9px 7px 19px -6px rgba(0, 0, 0, 1);
   position: fixed;
   margin: 12px;
-  top: 30%;
-  left: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   border-radius: 12px;
+  top: 30% !important;
+  left: 10% !important;
 }
 
 .d-flex p {
@@ -144,13 +144,13 @@ body {
 }
 
 .btn {
-  display: flex;
-  gap: 8px;
+  display: flex !important;
   width: 80%;
+  gap: 8px;
 }
 
 .btn button {
-  width: 100%;
+  width: 50%;
   padding: 12px;
   background-color: var(--primary--colo);
   font-size: 16px;
@@ -175,5 +175,24 @@ body {
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  color: var(--primary--colo);
+  background-color: var(--primary--colo);
+  border-radius: 50%;
+}
+
+.btnNavigate {
+  padding: 20px;
+  /* background-color: red; */
+  position: absolute;
+  width: 60%;
+  bottom: 0;
+  margin-top: 20px;
+  padding: 24px;
+  /* background-color: red; */
+}
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
