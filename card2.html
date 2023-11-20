@@ -90,45 +90,35 @@
                                 <span class="visually-hidden">Next</span>
                               </button>
                             </div>
+                            <!-- end btnNavigate -->
                           </div>
                         
                     
                 
             </div>
             
-            <!-- <div class="arrow">
-                    <span><i class="fa fa-arrow-left"></i></span>
-                    <span><i class="fa fa-arrow-right"></i></span>
-            </div> -->
-            <!-- float -->
-            
         </div>
-    </div>
-    <div id="btnFloat"><i class="fa fa-arrow-left" style="color: black;"></i>
-    </div>
-    <br><br><br><br>
-
-    <!-- modal -->
-    <div class="modal">
-
-        <p id="closed">x</p>
-        <h1>The End</h1>
-        <div class="btn">
-            <button class="primary">Rate This app</button>
-            <button class="secondary">Repeat again</button>
-        </div>
-
-    </div>
-
-
-
+      </div>
+      <div id="btnFloat"><i class="fa fa-arrow-left" style="color: black;"></i>
+      </div>
+      <br><br><br><br>
+      
+            <!-- modal -->
+            <div class="modal w-75 h-auto p-1">
+              <p id="closed">x</p>
+              <h1>The End</h1>
+              <div class="btn">
+                  <button class="primary"><i class="fa fa-thumbs-up fa-lg"></i></button>
+                  <button class="secondary">Others</button>
+              </div>
+          </div>
+      
     <script>
        const backbtn = document.querySelector('#btnFloat')
         const btnprimary = document.querySelector('.primary')
         const modal = document.querySelector('.modal')
         const btnsec = document.querySelector('.secondary')
         const closed = document.querySelector('#closed')
-        const deskrip = document.querySelector('.desc')
 
        // scroll
        document.onscroll = function() {scrollFunction()};
@@ -150,8 +140,8 @@ const kundev = 'https://play.google.com/store/apps/developer?id=Kun+Dev'
 const wrapper = document.querySelector('.wrapper')
 backbtn.addEventListener('click',()=>{
 modal.classList.toggle('d-flex')
-wrapper.style.opacity = '.5'
-wrapper.style.backgroundColor = '#00000055'
+wrapper.style.opacity = '.3'
+// wrapper.style.backgroundColor = '#00000055'
 
 backbtn.addEventListener('click',()=>{
     // location.href = main;
@@ -163,13 +153,13 @@ btnprimary.addEventListener('click',()=>{
     
 })
 btnsec.addEventListener('click',()=>{
-    modal.classList.remove('d-flex')
-    wrapper.style.opacity = '1'
-    wrapper.style.backgroundColor = ''
-
+  location.href = main;
+  
 })
 closed.addEventListener('click',()=>{
-    location.href = main;
+  modal.classList.remove('d-flex')
+  wrapper.style.opacity = '1'
+  wrapper.style.backgroundColor = ''
 
 })
 
@@ -189,70 +179,12 @@ backbtn.classList.add('btnFloat')
         let audio = new Audio (audioSrc)
             audio.play();
 
-        // wrapper.style.backgroundColor = 'red'
-
         btnPause.addEventListener('click',()=>{
    
                audio.pause();
    
-           // wrapper.style.backgroundColor = 'red'
-   
         })
      })
-
-    // const ctx = new AudioContext();
-
-    //     let audio;
-
-    //     fetch("https://firebasestorage.googleapis.com/v0/b/listening-app-e843d.appspot.com/o/Backsound%20Jawa%20-%20Javanese%20Wedding%20Backsound.wav?alt=media&token=91753731-e1eb-48d1-9c46-1ae8784c33b1")
-
-    //     .then(data => data.arrayBuffer())
-    //     .then(arrayBuffer => ctx.decodeAudioData(arrayBuffer))
-    //     .then(decodedAudio => {
-    //     audio = decodedAudio;
-
-    //     });
-
-
-    //     function playback() {
-    //     const playSound = ctx.createBufferSource();
-
-    //     playSound.buffer = audio;
-    //     playSound.connect(ctx.destination)
-    //     playSound.start(ctx.currentTime);
-        
-    //     // btnPause.addEventListener('click', event => {
-    //     //     playSound.pause();
-    //     // });
-
-    //     }
-
-    //     btnOpen.addEventListener('click', playback());
-
-
-
-    // swipper content
-
-    const para1  = document.querySelector('.slide-1')
-    const para2  = document.querySelector('.slide2')
-    const btnLeft  = document.querySelector('.fa-arrow-left')
-    const btnRight  = document.querySelector('.fa-arrow-right')
-    
-    btnRight.addEventListener('click', ()=>{
-
-        para1.classList.add('absolute')
-        para2.classList.add('slide-1')
-        para2.classList.remove('absolute')
-        
-    })
-
-    btnLeft.addEventListener('click', ()=>{
-
-        para1.classList.remove('absolute')
-        para2.classList.remove('slide-1')
-        para2.classList.add('absolute')
-        
-    })
 
      </script>
 

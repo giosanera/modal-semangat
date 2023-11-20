@@ -24,33 +24,40 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 #btnFloat {
-  padding: 20px;
+  position: absolute;
+  padding: 12px;
   background-color: var(--primary--colo);
-  right: 10%;
-  bottom: -50%;
+  right: 7%;
+  bottom: -45%;
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  position: absolute;
   border: none;
   color: black;
   display: none;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   box-shadow: -9px 7px 19px -6px rgba(0, 0, 0, 1);
   animation-name: ease-in;
-  animation-duration: 4s;
+  animation-duration: 1s;
+  opacity: 0.4;
+}
+
+#btnFloat:hover {
+  opacity: 1;
 }
 
 @keyframes ease-in {
   from {
-    opacity: 0;
+    transform: translateY(70px);
   }
   to {
-    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -61,6 +68,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .wrapper {
@@ -70,7 +78,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* background-color: rgba(211, 211, 211, 25%); */
+  padding-bottom: 20px;
 }
 
 .hero {
@@ -177,22 +185,50 @@ body {
 .carousel-control-next-icon {
   background-color: var(--primary--colo);
   border-radius: 50%;
+  margin: 50px 12px 0px 12px;
+  padding: 16px;
+}
+.carousel-control-prev-icon {
+  margin-right: 20px;
 }
 
 .btnNavigate {
   padding: 20px;
-  /* background-color: red; */
   position: absolute;
-  width: 60%;
-  bottom: 0;
-  margin-top: 20px;
-  padding: 24px;
-  /* background-color: red; */
+  width: 20%;
+  height: 30px;
+  bottom: 5%;
 }
 
 .carousel {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+}
+
+.content {
+  padding-bottom: 40px;
+  width: 100%;
+}
+
+.far-gold {
+  color: #ffd700;
+}
+
+.anim {
+  animation-name: anim;
+  animation-duration: 0.5s;
+}
+
+@keyframes anim {
+  from {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
 }
