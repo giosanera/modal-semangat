@@ -16,39 +16,39 @@
       <div class="card-list">
         <!-- card1 -->
         <div class="card" id="card1">
-          <img src="assets/3 1.png" alt="" />
+          <img src="assets/3 1.png" alt="dfg" />
           <div class="desc">
             <h5>The boy who cried wolf</h5>
             <p>Once, there was a boy who became bored when he watched over the village sheep grazing on the hillside</p>
           </div>
         </div>
-        <!-- card1 -->
+        <!-- card2 -->
         <div class="card" id="card2">
-          <img src="assets/4 1.png" alt="" />
+          <img src="assets/4 1.png" alt="as" />
           <div class="desc">
             <h5>Petualangan Si Kelinci Kecil di Hutan Ajaib`</h5>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, harum.</p>
           </div>
         </div>
-        <!-- card1 -->
+        <!-- card3 -->
         <div class="card">
-          <img src="assets/5 1.png" alt="" />
+          <img src="assets/5 1.png" id="card3" alt="al" />
           <div class="desc">
             <h5>Petualangan Si Kelinci Kecil di Hutan Ajaib`</h5>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, harum.</p>
           </div>
         </div>
-        <!-- card1 -->
+        <!-- card4 -->
         <div class="card">
-          <img src="assets/6 1.png" alt="" />
+          <img src="assets/6 1.png" id="card4" alt="dd" />
           <div class="desc">
             <h5>Petualangan Si Kelinci Kecil di Hutan Ajaib`</h5>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, harum.</p>
           </div>
         </div>
-        <!-- card1 -->
+        <!-- card5 -->
         <div class="card">
-          <img src="assets/7 1.png" alt="" />
+          <img src="assets/7 1.png" id="card5" alt="" />
           <div class="desc">
             <h5>Petualangan Si Kelinci Kecil di Hutan Ajaib`</h5>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, harum.</p>
@@ -125,11 +125,16 @@
 
       const card1 = document.querySelector("#card1");
       const card2 = document.querySelector("#card2");
+      const card3 = document.querySelector("#card3");
+      const card4 = document.querySelector("#card4");
+      const card5 = document.querySelector("#card5");
       const card = document.querySelector(".card");
 
       const url1 = "card1.html";
       const url2 = "card2.html";
       const url3 = "card3.html";
+      const url4 = "card4.html";
+      const url5 = "card5.html";
 
       card1.addEventListener("click", () => {
         location.href = url1;
@@ -137,25 +142,37 @@
       card2.addEventListener("click", () => {
         location.href = url2;
       });
+      card3.addEventListener("click", () => {
+        location.href = url3;
+      });
+      card4.addEventListener("click", () => {
+        location.href = url4;
+      });
+      card5.addEventListener("click", () => {
+        location.href = url5;
+      });
 
+      // event search 😀
       // selector
       const btnCari = document.querySelector(".fa-search");
       const cardList = document.querySelector(".card-list");
       const pop = document.querySelector(".floatingPop");
       const btnClose = document.querySelector("#close");
+      // main search component
       const btnClear = document.querySelector("#clear");
       const btnSearch = document.querySelector("#search");
       const searchBox = document.getElementsByName("keyword")[0];
-
-      // data section selection
-
-      const data_section = document.getElementsByClassName("data")[0];
 
       // data anomali
 
       const data = ["Listening Nature", "Animal On Zoo", "Culture Wild", "Fish on unity form", "Frog talking each other", "Tiranosaurus Eating the plant"];
 
+      // data section selection
+
+      const data_section = document.getElementsByClassName("data")[0];
+
       btnCari.addEventListener("click", () => {
+        // floating button click => show popup
         pop.classList.toggle("pop");
 
         cardList.classList.toggle("listCard");
@@ -167,29 +184,38 @@
       });
 
       btnClear.addEventListener("click", (event) => {
+        // searchBox refer to tag input
+        // when even btnClear => click, value input reset / clear value
         searchBox.value = "";
       });
 
       btnSearch.addEventListener("click", (event) => {
+        // when btnSearch onClick => searching data save into a function
         searchData();
       });
 
       // data value
       searchBox.addEventListener("keyup", (event) => {
+        // keyup is properti eventListener, when keyboar click === code
+        // 13 === enter / btnSearch when clicked
+        // inside load a condition, if keycode === true {execute}
+        // in this case doing searching data by the keyword and tried show data
+        // beside data anomali avail
         if (event.keyCode === 13) {
           searchData();
           data_section.classList.remove("d-flex");
         }
       });
 
-      // func melakukan pencaraian data
+      // declare function SearchData
       function searchData() {
-        // ketika input diketik ubah ke toLowerCase()
-        // buat variabel baru buat nampung
-
+        // save tag input into new varible search_value
+        // .value.toLowerCase() is mean every input whose value mixing or CAPITALIZE
+        // will be all small char
         const search_value = searchBox.value.toLowerCase();
 
-        // cloning data anomali diatas dengan slice[0] dan array dimulai dari 0
+        // becouse data anomali is object, we couldn't call direct
+        // save into new variable
 
         const data_filtered = data.slice(0);
 

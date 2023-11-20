@@ -27,6 +27,44 @@ body {
   position: relative;
 }
 
+/* navbar */
+
+nav ul {
+  display: none;
+  align-items: center;
+  width: 100%;
+  background-color: var(--primary--colo);
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 12px;
+  color: white;
+  animation-name: anim-nav;
+  animation-duration: 2s;
+}
+
+@keyframes anim-nav {
+  from {
+    transform: translateY(-70px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+nav ul li:first-child {
+  margin-right: 12px;
+}
+
+nav ul li a {
+  color: var(--bg-card);
+}
+
+/* event nav run */
+
+/* end nav */
+
 #btnFloat {
   position: absolute;
   padding: 12px;
