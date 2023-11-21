@@ -44,6 +44,7 @@ body {
   justify-content: space-evenly;
   position: relative;
   overflow: hidden;
+  background-color: red;
 }
 
 .wrapper img {
@@ -126,10 +127,12 @@ body {
   height: 75%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 16px;
   align-items: center;
   text-align: center;
+  background-color: salmon;
+  margin-bottom: 4%;
 }
 
 .cta h1 {
@@ -161,13 +164,13 @@ body {
   display: flex;
   flex-direction: column;
   width: 105%;
-  height: 1000px !important;
+  height: 100%;
   padding: 20px;
   align-items: center;
   justify-content: space-between;
   overflow-y: scroll;
-  margin-top: 16%;
-  scrollbar-width: thin;
+  margin-top: 5%;
+  /* scrollbar-width: thin; */
 }
 
 .card {
@@ -182,7 +185,7 @@ body {
 }
 #card1 {
   padding-top: 20px;
-  margin-top: 8%;
+  /* margin-top: 8%; */
   /* background-color: red;    */
 }
 

@@ -165,7 +165,18 @@
 
       // data anomali
 
-      const data = ["Listening Nature", "Animal On Zoo", "Culture Wild", "Fish on unity form", "Frog talking each other", "Tiranosaurus Eating the plant"];
+      const data = [
+        // title mean search btn click by keyword
+        // show title, when clicked => target
+        { title: "konten card 1", url: "http://127.0.0.1:3000/card1.html" },
+        { title: "konten card 2", url: "http://127.0.0.1:3000/card2.html" },
+        { title: "konten card 3", url: "http://127.0.0.1:3000/card3.html" },
+        { title: "konten card 4", url: "http://127.0.0.1:3000/card4.html" },
+        { title: "konten card 5", url: "http://127.0.0.1:3000/card5.html" },
+        { title: "konten card 6", url: "http://127.0.0.1:3000/card6.html" },
+        { title: "konten card 7", url: "http://127.0.0.1:3000/card7.html" },
+        { title: "all", url: "_blank" },
+      ];
 
       // data section selection
 
@@ -225,7 +236,7 @@
           if (data_filtered[i].toLowerCase().includes(search_value)) {
             // maka lakukan ambil alih lis data a href default menjadi data anomali berdasarkan keyword
 
-            data_section.innerHTML += `<a href="card2.html">${data_filtered[i]}</a>`;
+            data_section.innerHTML += `<a href=${data_filtered[i][title]}>${data_filtered[i][url]}</a>`;
           }
         }
       }
