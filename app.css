@@ -325,6 +325,12 @@ body {
     width: 360px;
   }
 
+  .wrapper {
+    margin: 20px 0px;
+    height: 100%;
+    justify-content: space-evenly;
+    /* background-color: red; */
+  }
   .card-list {
     width: 100%;
     height: 1000px !important;
@@ -346,6 +352,7 @@ body {
 @media screen and (max-width: 340px) {
   .fContainer {
     width: 340px;
+    height: 100%;
   }
 
   .cta p {
@@ -357,7 +364,6 @@ body {
     margin: 20px 0px;
     height: 100%;
     justify-content: space-evenly;
-    /* background-color: red; */
   }
 
   .wrapper img {
@@ -374,6 +380,7 @@ body {
 @media screen and (max-width: 365px) {
   .fContainer {
     width: 360px;
+    height: 100%;
   }
 
   .cta p {
@@ -386,7 +393,6 @@ body {
     margin-bottom: 20px;
     height: 100%;
     justify-content: space-between;
-    /* background-color: red; */
   }
 
   .wrapper img {
@@ -403,6 +409,7 @@ body {
 @media screen and (max-width: 370px) {
   .fContainer {
     width: 370px;
+    height: 100%;
   }
 
   .cta p {
@@ -415,7 +422,6 @@ body {
     margin-bottom: 20px;
     height: 100%;
     justify-content: space-between;
-    /* background-color: red; */
   }
 
   .wrapper img {
@@ -432,6 +438,7 @@ body {
 @media screen and (max-width: 380px) {
   .fContainer {
     width: 380px;
+    height: 100%;
   }
 
   .cta p {
@@ -444,7 +451,34 @@ body {
     margin-bottom: 20px;
     height: 100%;
     justify-content: space-between;
-    /* background-color: red; */
+  }
+
+  .wrapper img {
+    height: 55%;
+    object-fit: cover;
+    border-radius: 0px 0px 20px 20px;
+  }
+
+  #cta {
+    font-size: 14px;
+    padding: 16px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .fContainer {
+    width: 390px;
+    height: 100%;
+  }
+
+  .cta p {
+    font-size: 14px;
+    margin-top: -20px;
+  }
+
+  .wrapper {
+    margin: 0px 0px;
+    margin-bottom: 20px;
+    height: 100%;
   }
 
   .wrapper img {
