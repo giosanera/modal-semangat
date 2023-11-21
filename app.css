@@ -343,6 +343,12 @@ body {
     height: 80px;
     object-fit: cover;
   }
+
+  #cta {
+    font-size: 14px;
+    padding: 16px;
+    margin-bottom: 7%;
+  }
 }
 
 @media screen and (max-width: 340px) {
@@ -371,9 +377,10 @@ body {
   #cta {
     font-size: 14px;
     padding: 16px;
+    margin-bottom: 7%;
   }
 }
-@media screen and (max-width: 365px) {
+@media screen and (max-width: 360px) {
   .fContainer {
     width: 360px;
     height: 100%;
@@ -400,6 +407,7 @@ body {
   #cta {
     font-size: 14px;
     padding: 16px;
+    margin-bottom: 7%;
   }
 }
 @media screen and (max-width: 370px) {
@@ -429,6 +437,7 @@ body {
   #cta {
     font-size: 14px;
     padding: 16px;
+    margin-bottom: 7%;
   }
 }
 @media screen and (max-width: 380px) {
